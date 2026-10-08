@@ -1,0 +1,69 @@
+# BEV Drone Project - 基础配置文件
+# ============================================================
+
+# ============================================================
+# BEV 栅格参数
+# ============================================================
+bev:
+  height: 200
+  width: 200
+  x_range: [-25.0, 25.0]    # 前向范围 (m), NED x
+  y_range: [-25.0, 25.0]    # 侧向范围 (m), NED y
+  depth_min: 0.1            # 深度裁剪下限 (m)
+  depth_max: 80.0           # 深度裁剪上限 (m)
+
+image:
+  height: 256
+  width: 704
+
+# ============================================================
+# 相机参数 (前视相机 front_center)
+# ============================================================
+camera:
+  num: 4
+
+  # ---- 内参 (Intrinsics) ----
+  # AirSim front_center 默认设置，FOV=90°, 方形像素
+  front:
+    intrinsics:
+      fx: 352.0       # 焦距 x (pixel)
+      fy: 352.0       # 焦距 y (pixel)
+      cx: 352.0       # 主点 x (pixel)
+      cy: 128.0       # 主点 y (pixel)
+      fov_deg: 90.0   # 水平视场角
+      width: 704       # 图像宽度
+      height: 256      # 图像高度
+
+    # ---- 外参 (Extrinsics): 相机 → 世界 (NED) ----
+    # 相机坐标系 (OpenCV): z-前, x-右, y-下
+    # 世界坐标系 (NED):    x-北(前), y-东(右), z-下
+    extrinsics:
+      # 旋转: 绕 X 轴俯仰角 (负值=低头/向下看)
+      pitch_deg: -30.0          # 相机俯角
+      roll_deg: 0.0             # 横滚角
+      yaw_deg: 0.0              # 偏航角
+      # 平移: 相机在无人机机身坐标系下的位置 NED (m)
+      translation:
+        x: 0.0                  # 前
+        y: 0.0                  # 右
+        z: -2.62                # 下 (无人机对地高度)
+
+  # ---- 下视相机 (bottom_center) ----
+  down:
+    intrinsics:
+      fx: 352.0
+      fy: 352.0
+      cx: 352.0
+      cy: 128.0
+      fov_deg: 90.0
+      width: 704
+      height: 256
+
+    extrinsics:
+      pitch_deg: -90.0         # 垂直向下
+      roll_deg: 0.0
+      yaw_deg: 0.0
+      translation:
+        x: 0.0
+        y: 0.0
+        z: -2.62

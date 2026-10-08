@@ -1,0 +1,26 @@
+{
+  "vehicle_name": "Drone1",
+  "front_camera": "front_center",
+  "down_camera": "bottom_center",
+  "depth_camera": "front_center",
+  "depth_down_camera": "bottom_center",
+  "rgb_width": 704,
+  "rgb_height": 256,
+  "depth_width": 704,
+  "depth_height": 256,
+  "depth_type": "DepthPlanar",
+  "depth_png_unit": "millimeter",
+  "depth_png_scale": 1000.0,
+  "depth_png_max_m": 65.535,
+  "position_ned_m": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": -2.616943120956421
+  },
+  "min_depth_m": 9.6796875,
+  "max_depth_m": 12656.0,
+  "mean_depth_m": 517.9462280273438,
+  "down_depth_min_m": 3.38671875,
+  "down_depth_max_m": 3.38671875,
+  "down_depth_mean_m": 3.38671875
+}

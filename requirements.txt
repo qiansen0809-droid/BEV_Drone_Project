@@ -1,0 +1,12 @@
+# PyTorch with CUDA 11.8 support
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+torch==2.0.1+cu118
+torchvision==0.15.2+cu118
+opencv-python==4.8.1.78
+transformers==4.35.2
+numpy==1.24.4
+pyyaml==6.0.1
+airsim
+git+https://github.com/openai/CLIP.git
+git+https://github.com/IDEA-Research/GroundingDINO.git

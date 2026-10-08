@@ -1,0 +1,52 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Editor, operating system, and local secrets
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+
+# Keep data-processing SOURCE, not generated datasets or vectors.
+data/*
+!data/*.py
+!data/README.md
+
+# Model and simulator binaries
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+checkpoints/
+weights/
+temp/
+simulation/Blocks/
+
+# Ignore new captures; keep only the supplied, small demo assets.
+simulation/captures/*
+!simulation/captures/bev_map.png
+!simulation/captures/capture_metadata.json
+!simulation/captures/depth.npy
+!simulation/captures/depth.png
+!simulation/captures/depth_down.npy
+!simulation/captures/depth_down.png
+!simulation/captures/depth_down_preview.png
+!simulation/captures/depth_preview.png
+!simulation/captures/test_01.jpg
+!simulation/captures/test_01_down.jpg

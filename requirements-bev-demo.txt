@@ -1,0 +1,4 @@
+# Minimal dependencies for the offline geometric BEV example only.
+numpy
+opencv-python
+PyYAML

@@ -1,0 +1,29 @@
+{
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "ViewMode": "SpringArmChase",
+    "ClockSpeed": 1,
+    "CameraDefaults": {
+        "CaptureSettings": [
+            {
+                "ImageType": 0,
+                "Width": 704,
+                "Height": 256,
+                "FOV_Degrees": 90,
+                "MotionBlurAmount": 0
+            },
+            {
+                "ImageType": 1,
+                "Width": 704,
+                "Height": 256,
+                "FOV_Degrees": 90
+            }
+        ]
+    },
+    "Vehicles": {
+        "Drone1": {
+            "VehicleType": "SimpleFlight",
+            "AutoCreate": true
+        }
+    }
+}
